@@ -5,11 +5,11 @@ function displayComments(response){
 }
 axios.get(apiUrl).then(displayComments);
 
-let apiFCUrl = "https://jsonplaceholder.typicode.com/comments/1";
+let apiFCUrl = "https://jsonplaceholder.typicode.com/comments";
 
-function displayComment1(response){
-    console.log(response);
+function showComment1(response){
+    console.log(response.data[0].email);
 }
 
-axios.get(apiFCUrl).then(displayComment1);
+axios.get(apiFCUrl).then(showComment1);
 
